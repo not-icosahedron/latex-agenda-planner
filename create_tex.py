@@ -129,6 +129,24 @@ class PlannerLanguages(Enum):
         'weekday': {0: 'Monday', 1: 'Tuesday', 2: 'Wednesday', 3: 'Thursday', 4: 'Friday', 5: 'Saturday',
                     6: 'Sunday'}
     }
+    IT = {
+        'personal_data': 'Anagrafica',
+        'name': 'Nome',
+        'phone': 'Telefono',
+        'cellphone': 'Cellulare',
+        'email': 'E-mail',
+        'birthday': 'Data di nascita',
+        'blood_type': 'Blood type',
+        'zip_code': 'CAP',
+        'address': 'Indirizzo',
+        'allergies': 'Allergie',
+        'in_case_emergency': 'In caso di emergenza chiamare:',
+        'notes': 'Note',
+        'months': {1: 'Gennaio', 2: 'Febbraio', 3: 'Marzo', 4: 'Aprile', 5: 'Maggio', 6: 'Giugno', 7: 'Luglio',
+                   8: 'Agosto', 9: 'Settembre', 10: 'Ottobre', 11: 'Novembre', 12: 'Dicembere'},
+        'weekday': {0: 'Lunedì', 1: 'Martedì', 2: 'Mercoledì', 3: 'Giovedì', 4: 'Venerdì', 5: 'Sabato',
+                    6: 'Domenica'}
+    }
 
     def __str__(self):
         return str(self.value)
@@ -340,8 +358,8 @@ class LaTexPlanner:
 
 def main():
     # Fav colors: 'NavyBlue', 'Dandelion', 'RawSienna'
-    planner = LaTexPlanner(color=LaTexColor.Dandelion,
-                           language=PlannerLanguages.ES,
+    planner = LaTexPlanner(color=LaTexColor.NavyBlue,
+                           language=PlannerLanguages.IT,
                            font_family=FontFamily.SANS_SERIF,
                            start_week_monday=True
                            )
